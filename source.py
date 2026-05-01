@@ -1,32 +1,41 @@
-print("Welcome to Dheeraj Quiz game")
+print("Welcome to my computer quiz!")
 
-playing = input("Do you want to play: ")
+playing = input ("Do you want to play? ")
 print(playing)
+
 if playing != "yes":
     quit()
-print("Okay let's Play! ")
+print("Okay! Let's Play:)")
+score = 0
 
-score = 2
-
-Answer = input("Full form of CHAT GPT? ")
-if Answer == "chat generative pre-trained transformer":
-    print("Correct!👍")
+answer = input("What does CPU stands for? ")
+if answer.lower() == "central processing unit":
+    print("correct!")
+    score += 1
 else:
-    print("Incorrect👎")
+    print("Incorrect!")
 
-Answer = input("Full form of AI? ")
-if Answer == "Artificial Inteligance":
-    print("Correct!👍")
+answer = input("What does GPU stands for? ")
+if answer.lower() == "graphics processing unit":
+    print("correct!")
+    score += 1
 else:
-    print("Incorrect👎")
+    print("Incorrect!")
 
-
-print(f"You got {score} questions correct!")
-
-if score == 2: 
-    print("You win!🎉🎉")
+answer = input("What does RAM stand for? ")
+if answer.lower() == "random access memory":
+    print("correct!")
+    score += 1
 else:
-    print("You lose!💔💔")
+    print("Incorrect!")
+
+answer= input("What does PSU stand for? ")
+if answer.lower() == "power supply":
+    print("correct!")
+    score += 1
+else:
+    print("Incorrect!")
 
 
-
+print("You got " + str(score) + "questions correct!")
+print("You got " + str((score/4)*100) + "%," )
